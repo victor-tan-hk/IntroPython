@@ -27,6 +27,7 @@ print (f"The first result from divideItems is {result}")
 
 #This no longer works 
 #because the / operator does not work on strings
+#Uncomment it and run to see the run time type error that occurs
 
 #result = divideItems("cat", "dog")
 

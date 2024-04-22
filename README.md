@@ -1,2 +1,2 @@
 # Intro to Python
-## 24 - 26 July
+## 23 - 25 April 2024

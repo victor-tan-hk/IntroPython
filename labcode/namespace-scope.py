@@ -31,9 +31,10 @@ def coolFunc():
     counter = 30
     print(counter)
     
-print ("Calling coolFunc")    
+print ("\nCalling coolFunc")    
 coolFunc()
-print (counter)
+print ("The global value of counter is", counter)
+
 
 #To access global variables within a function, use keyword global
 
@@ -41,10 +42,11 @@ def hotFunc():
     #This references the global variable counter
     global counter
     counter = 50
+    print (counter)
 
-print ("Calling hotFunc")    
+print ("\nCalling hotFunc")    
 hotFunc()
-print (counter)
+print ("The global value of counter is", counter)
 
 
 
@@ -53,15 +55,15 @@ def outerFunc():
     a = 1 # defined under outerfunc
     def innerFunc():
         a = 2
-        print(a)
+        print("a inside innerFunc is", a)
     
     innerFunc()
-    print(a)
+    print("a inside outerFunc is", a)
     
-print ("Calling outerFunc")    
+print ("\nCalling outerFunc")    
 outerFunc()
 #This will always reference the global a
-print(a)
+print("The global value of a is ", a)
 
 
 # To access local variables within a nested function body
@@ -72,13 +74,15 @@ def largerFunc():
     def smallerFunc():
         nonlocal b
         b = 2
-        print(b)
+        print("b inside smallerFunc is", b)
+
     
     smallerFunc()
-    print(b)
+    print("b inside largerFunc is", b)
     
-print ("Calling largerFunc")    
+print ("\nCalling largerFunc")    
 largerFunc()
 #This will always reference the global b
 print(b)
+print("The global value of b is ", b)
 

@@ -1,53 +1,48 @@
 
 
-#Capitalizes a string
+print("\nCapitalizes a string")
 txt = "python is awesome!"
-print (txt.capitalize() + "\n")
+print (txt.capitalize())
 
-#Converts string to uppercase
-print(txt.upper() + "\n")
+print("\nConverts string to uppercase")
+print(txt.upper())
 
-#Converts string to lowercase
+print("\nConverts string to lowercase")
 txt = "PYTHON IS AWESOME"
-print(txt.lower() + "\n")
+print(txt.lower())
 
-# checks if all the letters are uppercase.
+print("\nChecks if all the letters are uppercase.")
 print(txt.isupper())
 
-# checks if all the letters are lowercase.
+print("\nChecks if all the letters are lowercase.")
 print(txt.islower())
 
-# checks if all the characters are numeric.
+print("\nChecks if all the characters are numeric.")
+# This returns false since all the characters are alphabets
 print(txt.isnumeric())
 
-# checks if all the characters are in the alphabet.
-# this returns false since the string contains spaces
-print(txt.isalpha())
+# This returns true since all the characters are numbers
+numericStr = "12345"
+print(numericStr.isnumeric())
 
+print("\nChecks if all the string characters are in the alphabet.")
 txt = "PYTHON"
 print(txt.isalpha())
 
-print()
+# this returns false since the string contains spaces
+strwithspaces = "PYTHON IS COOL"
+print(strwithspaces.isalpha())
 
-# returns the number of occurrences of a substring in the given string.
+
+print("\ncount method returns the number of occurrences of a substring in the given string.")
 
 string = "Python is awesome, isn't it?"
 substring = "is"
 print ("The substring occurs in the main string this many times: ", string.count(substring))
 
 
-# String characters are indexed from 0
-# returns the index of first occurrence of the substring (if found). # If not found, it returns -1.
-message = 'Python is a fun programming language'
-
-# check the index of 'fun'
-print("fun occurs at position ", message.find('fun'))
-print("boring occurs at position ", message.find('boring'))
-
-
-# replaces each matching occurrence of a substring with another string.
+print ("\nreplace method replaces each matching occurrence of a substring with another string.")
 text = 'bat ball'
 
 replaced_text = text.replace('ba', 'ro')
 print("After replacement, we have", replaced_text)
-

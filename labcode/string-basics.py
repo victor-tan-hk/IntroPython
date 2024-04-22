@@ -16,7 +16,7 @@ validMessage = 'Is this quote "A cat has nine lives" true ?? '
 #invalidMessage = "Is this quote "A cat has nine lives" true ?? "
 
 
-#You can provide escape characters preceded by \
+print("You can provide escape characters preceded by the back slash")
 validMessage = 'It\'s a nice day'
 print (validMessage);
 
@@ -27,32 +27,39 @@ print('First Line\nSecond Line\nThird Line')
 print('Word1\t\tWord2')
 
 
-#A raw string treats the backslashes (\) as literal characters.
-#Useful for working with directory locations
+
 
 #This will give an error because the \U is interpreted as an escape sequence
 #incorrectWindowsDir = "C:\Users\MyName\Desktop"
+
+#To use a \ directly in a string, we need to make it an escape sequence
+#character with \\
+print ("Using backslash in a string to designate a Windows directory locations")
 
 correctWindowsDir = "C:\\Users\\MyName\\Desktop"
 print ("Windows path location ", correctWindowsDir)
 
 
-#No such problem with Linux paths because / is NOT interpreted as escape sequence
+#No such problem with Linux paths because forward slash / is NOT interpreted as escape sequence
 myDirLocationLinux = "/usr/var/share"
 print ("Linux path location ", myDirLocationLinux)
 
-#We can use a raw string to simplify the writing of the Windows directory path
+
+#A raw string treats the backslashes (\) as literal characters.
+#Useful for specifying Windows-based directory locations
+
+print("\nUse a raw string to simplify the writing of the Windows directory path")
 
 myDirLocationWindows = r"C:\Users\MyName\Desktop"
 print ("Windows path location ", myDirLocationWindows)
 
-#Creating a string that spans multiple lines using escape sequence characters
+print("\nCreating a string that spans multiple lines using escape sequence characters")
 
-line_str = "I'm learning Python.\nIt is the best language for data science and automation.\nIt is very easy to learn."
+line_str = "\nI'm learning Python.\nIt is the best language for data science and automation.\nIt is very easy to learn."
 print(line_str)
 
-#Achieving the same effect using multi line string
-#Keep in mind that escape character sequences still apply in multiline string
+print("\nAchieving the same effect using multi line string that is delimited at start and end with 3 double quotes")
+print("Escape character sequences still apply in multiline string")
 multiline_str = """
 I'm learning\t\tPython.
 It is the best language for data science and automation.
@@ -61,20 +68,21 @@ It is very easy to learn.
 print(multiline_str)
 
 
-#You can combine raw strings and multiline strings together
+print("\nYou can combine raw strings and multiline strings together")
 #This will preserve all backslashes in the string and
 #not interpret it as escape character sequences
 
-raw_multiline_string = r"""This is a
+raw_multiline_string = r"""
+This is a
 raw multiline string
 with backslashes \t and \n
 that are not escaped."""
 print (raw_multiline_string)
 
 
-# 3 main ways of formatting string output
+print("\n3 main ways of formatting string output")
 
-#1 Old Style String Formatting (% Operator)
+print ("\nApproach #1:Old Style String Formatting (% Operator) ")
 
 name = 'Pete'
 print('Hello %s' % name)
@@ -82,7 +90,7 @@ print('Hello %s' % name)
 num = 5
 print('I have %d apples' % num)
 
-#
+
 price = 22.6784
 print('This cup costs %f dollars' % price)
 
@@ -90,7 +98,7 @@ print('This cup costs %f dollars' % price)
 print('This cup costs %.2f dollars' % price)
 
 
-#2 New Style String Formatting (str.format)
+print ("\nApproach #2:New Style String Formatting (str.format) ")
 
 name = 'John'
 age = 20
@@ -107,41 +115,41 @@ print(myorder.format(quantity, itemno, price))
 
 
 
-#3 String Interpolation / f-Strings (Python 3.6+)
-
+print ("\nApproach #3 String Interpolation / f-Strings (Python 3.6+)")
 
 name = 'Elizabeth'
 print(f'Hello {name}!')
-
 
 a = 5
 b = 10
 print(f'Five plus ten is {a + b}')
 print(f'A more complex mathematical expression is { (2 * (a + b)) - 10 } ')      
 
-#Multiline f-strings
+print ("\nMultiline f-strings are delimited with () ")
 message = (
 f'Hi, {name}. \n'
 f'You have {a} items on your shopping list'
 )
 print (message)
 
-#Formatting long numbers with a comma separator
+print("\nFormatting long numbers in multiline string with a comma separator")
 salary = 10000000
 print (f"Your salary is {salary:,}")
 
+print("\nRounding decimal numbers in multiline string to specific number of places")
 #Rounding
 pi = 3.1415926
 print (f"Value of pi to 2 decimal places is {pi:.2f}")
 
 #Percentage
+print("\nDisplaying a decimal number in the form of a percentage in multiline string")
 passExam = 0.816562
 print (f"Percentage of students who pass the exam is {passExam:.2%}")
 
 
-print ("2 basic ways to concatenate two or more strings together")
+print ("\n2 basic ways to concatenate two or more strings together")
 
-#Using the + operator works for both literals and variables
+print("\nApproach 1: Using the + operator works for both literals and variables")
 
 s = 'Python ' + ' is' + ' fun'
 print (s)
@@ -150,46 +158,50 @@ s2 = s1 + ' is' + ' exciting'
 print(s2)
 
 
-#Concatenating identical strings together multiple times using the * operator
+print("\nApproach 2: Concatenating identical strings together multiple times using the * operator")
 s3 = s1 * 5
 print (s3)
 
-#Concatenating via the join method
+print("\nApproach 3: Concatenating via the join method, where you can also specify a separator between the concatenated strings")
 s1, s2, s3 = 'Large', 'Black', 'Cat'
-s4 = ' '.join([s1, s2, s3])
+s4 = ' '.join([s1, s2, s3]) # Separator space 
 print(s4)
+s5 = ','.join([s1, s2, s3]) # Separator ,
+print(s5)
+s6 = ':'.join([s1, s2, s3]) # Separate :
+print(s6)
 
-#Concatenating using the % formatting
-s5 = '%s %s %s' % (s1, s2, s3)
-print (s5)
 
-#Concatenating using the format method
-s6 = '{} {} {}'.format(s1, s2, s3)
-print (s6)
+print ("\nApproach 4: Concatenating using the % formatting")
+s7 = '%s %s %s' % (s1, s2, s3)
+print (s7)
 
-#Concatenating using f-string
+print ("\nApproach 5: Concatenating using the format method")
+s8 = '{} {} {}'.format(s1, s2, s3)
+print (s8)
+
+print ("\nApproach 6: Concatenating using f-string")
 s7 = f'{s1} {s2} {s3}'
 print (s7)
 
-print("Using optional parameters of the print function to customize console output")
+print("\nUsing optional parameters of the print function to customize console output")
 
-# Using end to replace the default newline escape character 
-# without another character
-
+print ("Using end parameter to replace the default newline escape character with space");
 print("mouse", end = ' ')
 print("donkey", end = ' ')
 print("horse")
 
+print ("\nUsing end parameter to replace the default newline escape character with comma");
 print("chicken", end = ',')
 print("zebra", end = ',')
 print("snake")
 
-#Using the sep to specify separating character between strings
+print("\nUsing the sep parameter to specify separating character between strings")
 
-#for formatting a date
+print ("Using - for formatting dates")
 print('09','12','2022', sep='-')
  
-#formatting email
+print ("Using @ for formatting email")
 print('elonmusk','tesla.com', sep='@')
 
 
