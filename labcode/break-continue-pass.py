@@ -8,7 +8,7 @@ for index in range(0, 10):
         break
     
 
-# When used inside a nested loop, break will terminate only the innermost loop
+print("\nWhen used inside a nested loop, break will terminate only the innermost loop")
 
 for x in range(5):
     for y in range(5):
@@ -18,8 +18,7 @@ for x in range(5):
         print(f"(x : {x}, y : {y})")
 
 
-#Typically used to break a while loop that is infinite
-#based on user input
+print("\nTypical use case for break: Terminate a while loop that is infinite based on user input")
 
 while True:
     userEntry = input('Enter an input (type Q to quit): ')
@@ -30,7 +29,7 @@ while True:
 # continue statement skips the remaining statements in 
 # the code block and continues with the next iteration 
 
-print ("Demonstrating continue in a for loop")
+print ("\nDemonstrating continue in a for loop")
 for index in range(0, 5):
     #This causes the printing of 2 to be skipped
     if index == 2:
@@ -40,7 +39,7 @@ for index in range(0, 5):
 # using continue in a while loop
 # We print out only odd numbers by skipping the print
 # when the numbers are even
-print ("Demonstrating continue in a while loop")
+print ("\nDemonstrating continue in a while loop")
 counter = 0
 while counter < 10:
     counter += 1

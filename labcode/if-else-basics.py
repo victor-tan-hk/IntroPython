@@ -19,7 +19,9 @@ print("This statement is always executed regardless of the evaluation")
 # Indentation ensures the 2 statements below the if and else 
 # statement are treated as a single code block
 
-print ("Demonstrating basic if-else")
+print ("\nDemonstrating basic if-else")
+# Change the value of number below to see which block gets executed
+
 number = 10
 if number > 0:
     print('Positive number')
@@ -31,7 +33,8 @@ else:
 print('This statement is always executed')
 
 
-print ("Demonstrating if-elif-else with logical and operator")
+print ("\nDemonstrating if-elif-else with logical and operator")
+# Change the value of bmi below to see which block gets executed
 bmi = 21
 weightStatus = ''
 
@@ -51,8 +54,10 @@ elif (bmi > 40):
 
 print ("Your weight classification is ", weightStatus)
 
-# You can also have a final else in an if-else-if to cater
-# for situations where none of the previous conditions are true
+
+print ("\nYou can also have a final else in an if-else-if to cater for situations where none of the previous conditions are true")
+# Change the value of weatherStatus below to see which block gets executed
+
 weatherStatus = "something wierd"
 if weatherStatus == 'rainy':
     print("I will order food online from Grab")
@@ -63,7 +68,7 @@ elif weatherStatus == 'cloudy':
 else: 
     print("I will just watch Netflix")
 
-print ("Demonstrating ternary operator")
+print ("\nDemonstrating ternary operator as a shortcut for standard if-else")
 
 #Standard if-else
 age = 20
@@ -80,21 +85,3 @@ message = ''
 message = "Yes, you can drive!" if age >= 18 else "Sorry, you can’t drive yet!"
 print(message)    
 
-#Ternary operator can also be used to simplify if-elif-else
-#However not recommended as the code is hard to understand
-
-#Standard if-elif-else
-x = -1
-if x < 0:
-    print('x is less than zero')
-elif x > 0:
-    print('x is greater than zero')
-else:
-    print('x is equal to 0')
-
-
-#Implementation with ternary operator
-x = -1
-message = ''
-message = 'x is less than zero' if x < 0 else 'x is greater than zero' if x > 0 else 'x is equal to 0'
-print (message)

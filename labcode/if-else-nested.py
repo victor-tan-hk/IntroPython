@@ -1,11 +1,11 @@
 
-# Nested if-else logic to implement this use case
+print("Using Nested if-else logic to implement various use cases")
 
 # If client earns more than 5000 a month and is married 
 # and have EPF savings of at least 60000, then client
 # qualifies for the loan 
 
-print("Loan Example #1")
+print("\nLoan Example #1")
 # Change the values here to test out the logic of the conditional statement
 monthlySalary = 8000
 isMarried = True
@@ -48,7 +48,7 @@ else:
 # 3. if you are married and both you and your spouse together earn 10000 or more a month and your EPF savings is at least 30000 
 
 
-print("Loan Example #2")
+print("\nLoan Example #2")
 # Change the values here to test out the logic of the conditional statement
 spouseMonthlySalary = 8000
 monthlySalary = 2000

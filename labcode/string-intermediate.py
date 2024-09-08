@@ -48,6 +48,23 @@ text_list = list(text)
 print (text_list)
 
 
+print("\nMany string methods return the index of a specific character in the list of characters")
+
+
+print("find method returns the index of first occurrence of the substring if it is found. If it is not found, it returns -1.")
+
+message = 'Python is a fun programming language'
+
+# check the index of 'fun'
+print("fun occurs at position ", message.find('fun'))
+print("boring occurs at position ", message.find('boring'))
+
+
+
+
+
+
+
 #Demonstrating that a string is immutable
 #the id function gives the memory address of the object 
 #that a variable references

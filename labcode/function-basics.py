@@ -20,14 +20,20 @@ def mult_numbers(num1, num2, num3):
     return product
 
 #The function can only be called after it is defined first  
+print("Calling the function greet")
 greet()    
+
+print("\nCalling the function sayName and passing it the value superman")
 
 #Calling a function and passing single string argument to it    
 sayName("superman")
 
+
+print("\nCalling the function add_numbers and passing it two numbers 3 and 5")
 #Calling function and passing two number arguments to it
 add_numbers(3,5)
 
+print("\nCalling the function mult_numbers and passing it three numbers 10, 5 and 2")
 #Calling function and passing three number arguments to it
 #Storing the value returned in a variable 
 result = mult_numbers(10, 5, 2)
@@ -49,6 +55,6 @@ def cool_add(a, b):
     """
     return a + b
     
-print ("Getting documentation on the function cool_add")
+print ("\nGetting documentation on the function cool_add")
 print (help(cool_add))
 

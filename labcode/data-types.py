@@ -4,7 +4,7 @@ hisname = "Superman"
 print(hisname, 'is of type', type(hisname))
 
 #Strings can be delimited by either single or double quotes
-hername = "Wonder Woman"
+hername = 'Wonder Woman'
 print(hername, 'is of type', type(hername))
 
 #Number types are either integer, floating point or complex
@@ -17,19 +17,21 @@ print(num2, 'is of type', type(num2))
 num3 = 1+2j
 print(num3, 'is of type', type(num3))
 
-print("Numbers in binary, octal or hexademical are prefixed with 0b, 0o or 0X")
+print("When designating binary, octal or hexademical values, prefix the values with 0b, 0o or 0X")
+print ("All numbers will be printed out in their corresponding decimal value")
 print(0b1101011)  # prints 107
 
 print(0xFB + 0b10)  # prints 253
 
 print(0o15)  # prints 13 
 
-#Large numbers can have underscores to make them easier to read
+print ("Large numbers can be specified with underscores to make them easier to read")
+print ("They will however be printed without the underscores")
 count = 10_000_000_000
 print("The value of count is ", count)
 
 
-#Boolean variables are either True or False
+print ("Boolean variables are either True or False")
 #Can be used in conditional expressions in if-else
 is_employee = True
 is_manager = False
