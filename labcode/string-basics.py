@@ -80,42 +80,7 @@ that are not escaped."""
 print (raw_multiline_string)
 
 
-print("\n3 main ways of formatting string output")
-
-print ("\nApproach #1:Old Style String Formatting (% Operator) ")
-
-name = 'Pete'
-print('Hello %s' % name)
-
-num = 5
-print('I have %d apples' % num)
-
-
-price = 22.6784
-print('This cup costs %f dollars' % price)
-
-#Rounding up to 2 decimal places
-print('This cup costs %.2f dollars' % price)
-
-
-print ("\nApproach #2:New Style String Formatting (str.format) ")
-
-name = 'John'
-age = 20
-
-print("Hello I'm {}, my age is {}".format(name, age))
-
-
-quantity = 3
-itemno = 567
-price = 49.321989
-myorder = "I want {} pieces of item number {} for {:.2f} dollars."
-
-print(myorder.format(quantity, itemno, price))
-
-
-
-print ("\nApproach #3 String Interpolation / f-Strings (Python 3.6+)")
+print("\nFormatting string output using string Interpolation / f-Strings (Python 3.6+)")
 
 name = 'Elizabeth'
 print(f'Hello {name}!')
@@ -147,7 +112,8 @@ passExam = 0.816562
 print (f"Percentage of students who pass the exam is {passExam:.2%}")
 
 
-print ("\n2 basic ways to concatenate two or more strings together")
+print ("\nConcatenating strings is a very common operation")
+print ("Some common approaches to performing it")
 
 print("\nApproach 1: Using the + operator works for both literals and variables")
 
@@ -163,6 +129,7 @@ s3 = s1 * 5
 print (s3)
 
 print("\nApproach 3: Concatenating via the join method, where you can also specify a separator between the concatenated strings")
+
 s1, s2, s3 = 'Large', 'Black', 'Cat'
 s4 = ' '.join([s1, s2, s3]) # Separator space 
 print(s4)
@@ -172,37 +139,8 @@ s6 = ':'.join([s1, s2, s3]) # Separate :
 print(s6)
 
 
-print ("\nApproach 4: Concatenating using the % formatting")
-s7 = '%s %s %s' % (s1, s2, s3)
-print (s7)
 
-print ("\nApproach 5: Concatenating using the format method")
-s8 = '{} {} {}'.format(s1, s2, s3)
-print (s8)
-
-print ("\nApproach 6: Concatenating using f-string")
+print ("\nApproach 4: Concatenating using f-string")
 s7 = f'{s1} {s2} {s3}'
 print (s7)
-
-print("\nUsing optional parameters of the print function to customize console output")
-
-print ("Using end parameter to replace the default newline escape character with space");
-print("mouse", end = ' ')
-print("donkey", end = ' ')
-print("horse")
-
-print ("\nUsing end parameter to replace the default newline escape character with comma");
-print("chicken", end = ',')
-print("zebra", end = ',')
-print("snake")
-
-print("\nUsing the sep parameter to specify separating character between strings")
-
-print ("Using - for formatting dates")
-print('09','12','2022', sep='-')
- 
-print ("Using @ for formatting email")
-print('elonmusk','tesla.com', sep='@')
-
-
 

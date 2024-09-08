@@ -2,7 +2,12 @@
 
 print("\nCapitalizes a string")
 txt = "python is awesome!"
-print (txt.capitalize())
+newTxt = txt.capitalize()
+print (newTxt)
+#The method produces a new string, but the original string remains unchanged
+print (txt)
+
+#This principle is true for all the remaining string methods below
 
 print("\nConverts string to uppercase")
 print(txt.upper())
@@ -10,6 +15,9 @@ print(txt.upper())
 print("\nConverts string to lowercase")
 txt = "PYTHON IS AWESOME"
 print(txt.lower())
+
+#All the is xxxx methods check for a specific criteria
+#Retursn True if criteria is met, false otherwise
 
 print("\nChecks if all the letters are uppercase.")
 print(txt.isupper())

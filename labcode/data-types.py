@@ -72,7 +72,7 @@ print(isinstance(num1, str))
 
 
 print ("Python is a dynamically typed language")
-print ("You can assign values (which are actually objects) of different types to the same variable")
+print ("You can assign values of different types to the same variable")
 message = 'Hello';
 print (type(message))
 message = 100

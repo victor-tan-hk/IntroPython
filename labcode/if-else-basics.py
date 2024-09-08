@@ -9,8 +9,13 @@ print ("Demonstrating basic if")
 #Therefore they are treated as code block that is executed 
 #as a single unit
 
-age = input('Enter your age:')
-if int(age) >= 18:
+age = int(input('Enter your age:'))
+
+# All boolean expressions evaluate to either True or False
+print (age >= 18)
+
+
+if age >= 18:
     print("You're eligible to vote.")
     print("Let's go and vote.")
 
@@ -22,7 +27,7 @@ print("This statement is always executed regardless of the evaluation")
 print ("\nDemonstrating basic if-else")
 # Change the value of number below to see which block gets executed
 
-number = 10
+number = int(input("Enter a number : "))
 if number > 0:
     print('Positive number')
     print ('This means its larger than zero')
@@ -35,7 +40,8 @@ print('This statement is always executed')
 
 print ("\nDemonstrating if-elif-else with logical and operator")
 # Change the value of bmi below to see which block gets executed
-bmi = 21
+bmi = int(input("Enter a BMI : "))
+
 weightStatus = ''
 
 if bmi < 18.5: 
