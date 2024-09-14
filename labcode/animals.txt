@@ -1,7 +1,0 @@
-cat
-dog
-rat
-mouse
-elephant
-chicken
-horse
